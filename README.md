@@ -1,4 +1,9 @@
 # KtorClient
+* [Why Ktor](#why-ktor-on-client-side)
+* [Add Dependencies and Permissions](#add-dependencies-and-permissions)
+* [DTO](#setup-the-data-models)
+* [API](#setup-the-api)
+
 
 ## Why Ktor on client-side?
 Ktor is built on Kotlin multi-platform mobile (KMM). 
