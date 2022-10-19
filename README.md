@@ -1,10 +1,10 @@
 # KtorClient
 
 ## Why Ktor on client-side?
-for KMM we don't use java libraries (eg. retrofit + okhttp)
+Ktor is built on Kotlin multi-platform mobile (KMM). 
+This means you can create both iOS and Android applications with Kotlin and share a huge part of Kotlin code for both platforms.
 
-## Setup
-### Add Dependencies and Permissions
+## Add Dependencies and Permissions
 add internet permission in `AndroidManifest.xml`. *required to make HTTP requests to the API*
 ```xml
 <uses-permission android:name="android.permission.INTERNET"/>
@@ -48,3 +48,28 @@ dependencies {
         classpath "org.jetbrains.kotlin:kotlin-serialization:1.5.21"
 }
 ```
+
+### Setup the data models
+- A model is a data transfer object(dto). It has data classes that represent what we get from an API.
+- inside `remote.data.dto` package create new data class called `PostResponse`, and create another one for requests.
+- we'll get data from this [API](https://jsonplaceholder.typicode.com)
+
+Here's how the PostResponse will look like:
+```kotlin
+@Serializable
+data class PostResponse(
+    val body: String,
+    val title: String,
+    val id: Int,
+    val userId: Int,
+)
+```
+
+### Setup the API endpoint
+
+
+
+
+
+
+[Reference](https://www.section.io/engineering-education/making-http-requests-with-ktor-in-android/)
