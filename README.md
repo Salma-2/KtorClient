@@ -65,9 +65,19 @@ data class PostResponse(
 )
 ```
 
-### Setup the API endpoint
+### Setup the API
+1. setup the api endpoint
+- create a new Kotlin Object file named HttpRoutes 
+```kotlin
+object HttpRoutes {
+    private const val BASE_URL = "https://jsonplaceholder.typicode.com"
+    const val POSTS = "$BASE_URL/posts"
+}
+```
 
-
+2. define which functions we need to access the endpoints.
+- create `PostsService` interface that will have mainly 2 functions (`getPosts()` and `createPost(postRequest)`)
+- create `PostsServiceImpl` to implement the actual network call using the Ktor client [Impl](https://github.com/Salma-2/KtorClient/blob/master/app/src/main/java/com/salma/ktorclient/remote/PostsServiceImpl.kt)
 
 
 
